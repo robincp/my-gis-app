@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/robincp/my-gis-app/static/css/main.323d7611.css",
+    "main.js": "/robincp/my-gis-app/static/js/main.14b54f01.js",
+    "static/js/453.cb57bbe4.chunk.js": "/robincp/my-gis-app/static/js/453.cb57bbe4.chunk.js",
+    "index.html": "/robincp/my-gis-app/index.html",
+    "main.323d7611.css.map": "/robincp/my-gis-app/static/css/main.323d7611.css.map",
+    "main.14b54f01.js.map": "/robincp/my-gis-app/static/js/main.14b54f01.js.map",
+    "453.cb57bbe4.chunk.js.map": "/robincp/my-gis-app/static/js/453.cb57bbe4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.323d7611.css",
+    "static/js/main.14b54f01.js"
+  ]
+}
