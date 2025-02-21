@@ -25,7 +25,7 @@ function MapComponent() {
 
   useEffect(() => {
     // Fetch locations from the backend
-    axios.get('http://localhost:5000/locations')
+    axios.get('http://3.90.67.220:5000/locations')
       .then(response => {
         setLocations(response.data); // Set the locations from the response
       })
