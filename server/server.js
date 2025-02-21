@@ -54,7 +54,26 @@ app.get('/', (req, res) => {
   res.send('Hello, world!');
 });
 
+app.get('/locations', async (req, res) => {
+  try {
+    console.log("Attempting to connect to the database...");
+    if (!pool) throw new Error("Database not initialized");
 
+    // Log database query attempt
+    console.log("Querying the database for locations...");
+    const result = await pool.query('SELECT * FROM national_grid_locations');
+    
+    // Log successful result
+    console.log("Query successful, fetched locations:", result.rows);
+    res.json(result.rows);
+  } catch (error) {
+    console.error("Error querying the database:", error);
+    res.status(500).json({ error: 'Failed to fetch locations', details: error.message });
+  }
+});
+
+
+/*
 app.get('/locations', async (req, res) => {
     try {
         if (!pool) throw new Error("Database not initialized");
@@ -64,7 +83,9 @@ app.get('/locations', async (req, res) => {
         console.error("Error querying the database:", error);
         res.status(500).json({ error: 'Failed to fetch locations' });
     }
+	
 });
+*/
 
 app.listen(port, () => {
     console.log(`🚀 Server is running on port ${port}`);
