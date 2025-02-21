@@ -50,6 +50,11 @@ async function initializeDatabase() {
 // Initialize the database connection
 initializeDatabase();
 
+app.get('/', (req, res) => {
+  res.send('Hello, world!');
+});
+
+
 app.get('/locations', async (req, res) => {
     try {
         if (!pool) throw new Error("Database not initialized");
